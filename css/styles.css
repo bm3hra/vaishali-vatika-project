@@ -761,18 +761,20 @@ footer .rera {
     .hero-actions { flex-direction: column; }
     .quick-stats { 
         display: flex; 
-        flex-wrap: wrap; 
-        bottom: -60px; 
-        padding: 15px; 
-        gap: 15px; 
+        flex-wrap: nowrap; 
+        bottom: -50px; 
+        padding: 12px 5px; 
+        gap: 5px; 
         width: 95%;
         z-index: 99;
+        justify-content: space-around;
     }
     .stat-item {
-        flex: 1 1 100px;
+        flex: 1 1 0;
         flex-direction: column;
         text-align: center;
-        gap: 5px;
+        gap: 2px;
+        padding: 0 2px;
     }
     .stat-item i { font-size: 28px; }
     .stat-text h3 { font-size: 18px; }
