@@ -1,4 +1,4 @@
-﻿// main.js
+// main.js
 
 // 1. Mobile Navigation Toggle
 const menuToggle = document.querySelector('.menu-toggle');
@@ -48,17 +48,25 @@ if (contactForm) {
         const flatType = document.getElementById('flatType').value;
         
         // Prepare WhatsApp message
-        const message = Hello, I want to enquire about Vaishali Vatika Flats.%0A%0A*Name:* %0A*Phone:* %0A*Interested In:* ;
+        const message = `Hello, I want to enquire about Vaishali Vatika Flats.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Interested In:* ${flatType}`;
         
         // Target WhatsApp Number
         const whatsappNumber = "917375975151";
-        const whatsappUrl = https://wa.me/?text=;
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
         
         // Open WhatsApp in new tab
         window.open(whatsappUrl, '_blank');
         
         // Show success and reset
-        alert('Redirecting to WhatsApp! You can send your details directly.');
+        const formStatus = document.getElementById('formStatus');
+        formStatus.textContent = "Your request has been submitted successfully!";
+        formStatus.className = "form-status status-success";
+        
+        setTimeout(() => {
+            formStatus.textContent = "";
+            formStatus.className = "form-status";
+        }, 5000);
+
         contactForm.reset();
     });
 }
