@@ -172,13 +172,13 @@ img {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh;
-    min-height: 600px;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white);
-    padding-top: 80px; /* Offset for navbar */
+    padding-top: 140px; /* Offset for navbar and badges gap */
+    padding-bottom: 120px; /* Protect content from quick-stats overlap */
 }
 
 .hero-bg {
@@ -758,8 +758,22 @@ footer .rera {
     .menu-toggle { display: block; }
     .hero-content h1 { font-size: 2rem; }
     .hero-actions { flex-direction: column; }
-    .quick-stats { display: none; } /* Hide on small mobile to save space */
-    .about { padding-top: 80px; }
+    .quick-stats { 
+        display: flex; 
+        flex-wrap: wrap; 
+        bottom: -60px; 
+        padding: 15px; 
+        gap: 15px; 
+        width: 95%;
+        z-index: 99;
+    }
+    .stat-item {
+        flex: 1 1 100px;
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    .about { padding-top: 100px; }
     .whatsapp-float {
         bottom: 20px;
         right: 20px;
