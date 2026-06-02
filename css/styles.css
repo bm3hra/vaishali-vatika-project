@@ -774,6 +774,9 @@ footer .rera {
         text-align: center;
         gap: 5px;
     }
+    .stat-item i { font-size: 28px; }
+    .stat-text h3 { font-size: 18px; }
+    .stat-text p { font-size: 12px; }
     .about { padding-top: 100px; }
     .whatsapp-float {
         bottom: 20px;
