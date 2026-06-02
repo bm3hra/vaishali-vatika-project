@@ -741,6 +741,7 @@ footer .rera {
 }
 
 @media (max-width: 768px) {
+    .hero { padding-top: 90px; }
     .nav-links {
         display: none; /* Hide for mobile by default, handled by JS later */
         position: absolute;
