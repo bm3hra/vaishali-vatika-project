@@ -731,11 +731,77 @@ footer .rera {
     transform: scale(1.05);
 }
 
+/* Leadership Section */
+.leadership-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.leader-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.leader-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+.leader-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid var(--bg-light);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.leader-card:hover .leader-image {
+    border-color: var(--primary-color);
+}
+
+.leader-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.leader-info h3 {
+    font-size: 22px;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.leader-info .designation {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .hero-content h1 { font-size: 2.5rem; }
     .quick-stats { flex-wrap: wrap; bottom: -80px; }
-    .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .about-grid, .contact-grid, .leadership-grid { grid-template-columns: 1fr; }
     .price-card.popular { transform: scale(1); }
     .price-card.popular:hover { transform: translateY(-10px); }
 }
