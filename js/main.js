@@ -51,7 +51,7 @@ if (contactForm) {
         const message = `Hello, I want to enquire about Vaishali Vatika Flats.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Interested In:* ${flatType}`;
         
         // Target WhatsApp Number
-        const whatsappNumber = "919718767111";
+        const whatsappNumber = "916376724562";
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
         
         // Open WhatsApp in new tab
